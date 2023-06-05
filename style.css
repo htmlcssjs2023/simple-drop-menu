@@ -1,0 +1,75 @@
+a{
+    display: block;
+}
+
+/*======================
+Header area style
+========================*/
+#header_area{
+    padding: 20px 0;
+}
+
+/* ==== Main Menu ==*/
+.main_menu{
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+#header_menu ul{
+  list-style-type: none;
+  padding: .5rem 0;
+ 
+}
+
+#header_menu ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Fira Code';
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+#header_menu ul>li:hover>a{
+    background-color: antiquewhite;
+}
+
+/* ==== Sub Menu ==*/
+#header_menu ul li ul{
+   position: absolute;
+   top:2.5rem;
+   display: flex;
+   flex-direction: column;
+   width: 10rem;
+   background-color: antiquewhite;
+   display: none;
+   transition: all;
+   z-index: 0;
+}
+
+#header_menu ul li ul li a{
+    border-radius: 0;
+}
+#header_menu ul li:hover ul{
+  display: block; 
+}
+#header_menu ul>li>ul>li:hover>a{
+    border-radius: 0;
+    border-bottom: 2px solid blueviolet;
+}
+
+/*==== Menu under sub-menu ====*/
+#header_menu ul li ul li{
+    position: relative;
+}
+
+#header_menu ul li ul li ul {
+    position: absolute;
+    left: 100%;
+    top: -8px;
+}
+#header_menu ul li ul li ul{
+  opacity: 0;
+  border: none;
+}
+#header_menu ul li ul li:hover ul{
+  opacity: 1;
+}
